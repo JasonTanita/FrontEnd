@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "assets",
+			"path": "../results-summary-component-main/assets"
+		},
+		{
+			"name": "Results summary component",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Results summary component"
+	}
+}
