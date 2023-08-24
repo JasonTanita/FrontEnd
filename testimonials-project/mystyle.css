@@ -1,0 +1,34 @@
+body{
+    background-color: gray;
+}
+
+
+.grid-container{
+    display: grid;
+    border: 3px solid black;
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 60vh 30vh 30vh 50vh 60vh;
+    justify-content: center;
+    gap: 30px;
+}
+
+.grid-item{
+    border: 3px solid yellow;
+}
+
+
+
+#daniel-mugshot{
+    border-radius: 50%;
+    width: 35px;
+    border: 3px solid red;
+}
+
+span{
+    font-size: 12px;
+}
+
+p{
+    font-size: 12px;
+    margin-left: 44px;
+}
