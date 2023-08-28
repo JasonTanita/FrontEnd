@@ -1,34 +1,122 @@
 body{
-    background-color: gray;
+    background-color: hsl(0, 0%, 89%);
+    font-size: 13px;
 }
 
 
 .grid-container{
     display: grid;
-    border: 3px solid black;
-    grid-template-columns: 0.8fr;
-    grid-template-rows: 60vh 30vh 30vh 50vh 60vh;
+    transform: translate(0px, 20px); /* moves the entire container, x & y axis */
+    grid-template-columns: 0.9fr;
+    grid-template-rows: repeat(5, auto);
     justify-content: center;
-    gap: 30px;
+    gap: 2rem;
 }
 
 .grid-item{
-    border: 3px solid yellow;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
 }
 
+#grid-unit-1{
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 89%);
+    position: relative;
+    z-index: 0; 
+}
+#grid-unit-2{
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 89%);
+}
+#grid-unit-3{
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+#grid-unit-4{
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 89%);
+}
+#grid-unit-5{
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
 
-
-#daniel-mugshot{
-    border-radius: 50%;
+.mugshot{
     width: 35px;
-    border: 3px solid red;
+    height: 35px;
+    border-radius: 50%;
 }
 
-span{
-    font-size: 12px;
+.patrick-photo{
+    border: 3px solid hsl(263, 55%, 52%);
+    border-radius: 50%;
 }
 
-p{
-    font-size: 12px;
-    margin-left: 44px;
+.daniel{
+    border: 2px solid  hsl(263, 49%, 61%);
+}
+
+.title{
+    position:relative;
+    display:flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+    z-index: 3;
+}
+/* should be a flex items */
+
+.certificate{
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.name{
+    margin-bottom: -13px;
+}
+
+.verified{
+    opacity: 0.5;
+    font-size: 12.5px;
+}
+
+#background-image{
+    position: absolute;
+    top: 0px;
+    right: 11%;
+    z-index: 1;
+}
+
+.header{
+    padding: 30px;
+    margin-top: -20px;
+    margin-bottom: -40px;
+    z-index: 2;
+}
+
+.quote{
+    padding: 30px;
+    margin: 0;
+    opacity: 0.7
+}
+
+
+@media (min-width: 600px){
+    .grid-container{
+        display:grid;
+        transform: translate(0px, 15vh); /* moves the entire container, x & y axis */
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 100px;
+    }
+    .grid-col-span-2{
+        grid-column: span 2;
+    }
+    #grid-unit-5{
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
